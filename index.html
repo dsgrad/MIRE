@@ -290,14 +290,14 @@
 <!-- Performance with Crowd Counting Datasets -->
 
 
-<!-- CrowdDiff Pipeline Image Section -->
+<!-- MonoDiff Pipeline Image Section -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3"><span class="dnerf">CrowdDiff</span> Pipeline</h2>
+        <h2 class="title is-3"><span class="dnerf">MonoDiff</span> Pipeline</h2>
         <div class="publication-image">
-          <img src="./static/crowddiff/flow chart.jpg" alt="CrowdDiff Pipeline Flow Chart" style="width: 75%; height: auto;">
+          <img src="./static/crowddiff/pipeline.jpg" alt="MonoDiff Pipeline Flow Chart" style="width: 75%; height: auto;">
         </div>
       </div>
     </div>
@@ -306,99 +306,7 @@
 
 
 <!-- Contributions -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3" style="text-align: center;">Contributions</h2>
-    <div class="content has-text-justified">
-      <p>
-        Stochastic crowd map generation is a key benefit of 
-        diffusion-based generative models. We can see that different 
-        realizations detect individuals that is not present in other realizations.            
-        Though this is a generative model, 
-        the proposed method has reassigned densities perfectly in certain instances, and 
-        for some cases, there is a slight shift in the location between realizations.
-      </p>
-    </div>
-    <div class="hero-body" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px;">
-      <style>
-        .zoom {
-          overflow: hidden;
-          display: flex;
-          justify-content: center; /* Centers the images horizontally */
-          align-items: center; /* Centers the images vertically */
-        }
-      </style>
-      <div class="zoom" style="flex: 1 0 45%; max-width: 49%;">
-        <img src="./static/crowddiff/stochastic generation/stochastic 171.jpg" alt="Image 1">
-      </div>
-      <div class="zoom" style="flex: 1 0 45%; max-width: 41%;">
-        <img src="./static/crowddiff/stochastic generation/stochastic 160.jpg" alt="Image 2">
-      </div>
-      <div class="zoom" style="flex: 1 0 48%; max-width: 31%;">
-        <img src="./static/crowddiff/stochastic generation/stochastic 58.jpg" alt="Image 3">
-      </div>
-      <div class="zoom" style="flex: 1 0 48%; max-width: 59%;">
-        <img src="./static/crowddiff/stochastic generation/stochastic 0004.jpg" alt="Image 4">
-      </div>
-      <div class="zoom" style="flex: 1 0 48%; max-width: 92.5%;">
-        <img src="./static/crowddiff/stochastic generation/stochastic 154.jpg" alt="Image 3">
-      </div>
-      
-    </div>
-  </div>
-</section>
 
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <!-- <h2 class="title is-3" style="text-align: center;">Contributions</h2> -->
-    <div class="content has-text-justified">
-      <p>
-        Crowd map fusion leverages the stochastic nature of the crowd density maps produced
-        by the diffusion process, and we adopt a systematic way to fuse the maps. 
-        We combine the crowd maps in the order of increasing similarity. 
-        The density kernels accepted by each realization are shown in 
-        <span style="color: green;">green</span> and the rejected kernels are shown in 
-        <span style="color: red;">red</span>.
-      </p>
-    </div>
-    <div class="hero-body" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px;">
-      <style>
-        .zoom {
-          overflow: hidden;
-          display: flex;
-          justify-content: center; /* Centers the images horizontally */
-          align-items: center; /* Centers the images vertically */
-          flex-direction: column; /* Aligns the caption below the image */
-        }
-        figcaption {
-          text-align: center; /* Center-aligns the caption text */
-          margin-top: 10px; /* Adds some space between the image and the caption */
-        }
-      </style>
-      <figure class="zoom" style="flex: 1 0 45%; max-width: 45%;">
-        <img src="./static/crowddiff/trial1 349.jpg" alt="Image 1">
-        <figcaption>Realization 1 count: 349</figcaption>
-      </figure>
-      <figure class="zoom" style="flex: 1 0 45%; max-width: 45%;">
-        <img src="./static/crowddiff/trial2 351.jpg" alt="Image 2">
-        <figcaption>Realization 2 count: 351</figcaption>
-      </figure>
-      <figure class="zoom" style="flex: 1 0 48%; max-width: 45%;">
-        <img src="./static/crowddiff/trial3 356.jpg" alt="Image 3">
-        <figcaption>Realization 3 count: 356</figcaption>
-      </figure>
-      <figure class="zoom" style="flex: 1 0 48%; max-width: 45%;">
-        <img src="./static/crowddiff/trial4 360.jpg" alt="Image 4">
-        <figcaption>Realization 4 count: 360</figcaption>
-      </figure>
-      <figure class="zoom" style="flex: 1 0 48%; max-width: 92.5%;">
-        <img src="./static/crowddiff/final 359.jpg" alt="Image 5">
-        <figcaption>Combined prediction: 359  &nbsp;&nbsp;  Ground truth: 361</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
 
 
 
