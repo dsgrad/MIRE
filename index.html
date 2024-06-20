@@ -159,13 +159,13 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://dylran.github.io/monodiff.github.io/"
+<!--                 <a href="https://dylran.github.io/monodiff.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
-                  </a>
+                  </a> -->
               </span>
               <!-- Dataset Link.
               <span class="link-block">
@@ -186,7 +186,7 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
       <img src="./static/crowddiff/jhu 01.gif" alt="GIF 1" style="width: 24%; height: auto;">
@@ -195,7 +195,7 @@
       <img src="./static/crowddiff/ucf qnrf.gif" alt="GIF 4" style="width: 21%; height: auto;">
     </div>
   </div>
-</section>
+</section> -->
 
 
 <!-- <section class="hero is-light is-small">
@@ -264,23 +264,22 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Crowd counting is a fundamental problem in crowd analysis which is typically accomplished 
-            by estimating a crowd density map and summing over the density values. However, this 
-            approach suffers from background noise accumulation and loss of density due to the use of 
-            broad Gaussian kernels to create the ground truth density maps. This issue can be overcome 
-            by narrowing the Gaussian kernel. However, existing approaches perform poorly when trained 
-            with ground truth density maps with broad kernels. To deal with this limitation, we propose 
-            using conditional diffusion models to predict density maps, as diffusion models show high 
-            fidelity to training data during generation. With that, we present 
-            <span class="dnerf">CrowdDiff</span> that generates the crowd density map as a reverse 
-            diffusion process. Furthermore, as the intermediate time steps of the diffusion process 
-            are noisy, we incorporate a regression branch for direct crowd estimation only during 
-            training to improve the feature learning. In addition, owing to the stochastic nature of 
-            the diffusion model, we introduce producing multiple density maps to improve the counting
-            performance contrary to the existing crowd counting pipelines. We conduct extensive 
-            experiments on publicly available datasets to validate the effectiveness of our method.
-            <span class="dnerf">CrowdDiff</span> outperforms existing state-of-the-art crowd counting 
-            methods on several public crowd analysis benchmarks with significant improvements.
+            3D object detection and pose estimation from a single-view image is challenging due to the
+            high uncertainty caused by the absence of 3D perception. As a solution, recent monocular 3D 
+            detection methods leverage additional modalities, such as stereo image pairs and LiDAR point 
+            clouds, to enhance image features at the expense of additional annotation costs. 
+            We propose using diffusion models to learn effective representations for monocular 3D detection 
+            without additional modalities or training data. We present <span class="dnerf">MonoDiff</span>, a novel framework that employs 
+            the reverse diffusion process to estimate 3D bounding box and orientation. But, considering the 
+            variability in bounding box sizes along different dimensions, it is ineffective to sample noise 
+            from a standard Gaussian distribution. Hence, we adopt a Gaussian mixture model to sample noise 
+            during the forward diffusion process and initialize the reverse diffusion process. 
+            Furthermore, since the diffusion model generates the 3D parameters for a given object image, 
+            we leverage 2D detection information to provide additional supervision by maintaining the 
+            correspondence between 3D/2D projection. Finally, depending on the signal-to-noise ratio, 
+            we incorporate a dynamic weighting scheme to account for the level of uncertainty in the
+            supervision by projection at different timesteps. <span class="dnerf">MonoDiff</span> outperforms current state-of-the-art 
+            monocular 3D detection methods on the KITTI and Waymo benchmarks without additional depth priors.
           </p>
         </div>
       </div>
