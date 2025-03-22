@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="MIRE: Matched Implicit Neural Representations">
+  <meta name="keywords" content="INR, Implicit Neural Representations, Activation Functions">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MonoDiff</title>
   <link rel="icon" href="./static/images/trans_jhu_web.png">
@@ -109,28 +109,33 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"><span class="dnerf">MonoDiff:</span> Monocular 3D Object Detection and Pose Estimation with Diffusion Models</h1>
+          <h1 class="title is-1 publication-title"><span class="dnerf">MIRE:</span> Matched Implicit Neural Representations</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://dylran.github.io">Yasiru Ranasinghe</a>,
+              <a href="">Dhananjaya Jayasundara</a>,
             </span>
             <span class="author-block">
-              <a href="https://deeptibhegde.github.io/website/">Deepti Hegde</a>,
+              <a href="">Heng Zhao</a>,
             </span>
             <span class="author-block">
-              <a href="https://engineering.jhu.edu/vpatel36/team/vishalpatel/">Vishal M Patel</a>
+              <a href="">Demetrio Labate</a>,
+            </span>            
+            <span class="author-block">
+              <a href="">Vishal M. Patel</a>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">Johns Hopkins Univeristy</span>
+            <span class="author-block">University of Housten</span>
+            
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://dylran.github.io/monodiff.github.io/"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -139,7 +144,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://dylran.github.io/monodiff.github.io/"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -159,7 +164,7 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://dylran.github.io/monodiff.github.io/"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -264,22 +269,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            3D object detection and pose estimation from a single-view image is challenging due to the
-            high uncertainty caused by the absence of 3D perception. As a solution, recent monocular 3D 
-            detection methods leverage additional modalities, such as stereo image pairs and LiDAR point 
-            clouds, to enhance image features at the expense of additional annotation costs. 
-            We propose using diffusion models to learn effective representations for monocular 3D detection 
-            without additional modalities or training data. We present <span class="dnerf">MonoDiff</span>, a novel framework that employs 
-            the reverse diffusion process to estimate 3D bounding box and orientation. But, considering the 
-            variability in bounding box sizes along different dimensions, it is ineffective to sample noise 
-            from a standard Gaussian distribution. Hence, we adopt a Gaussian mixture model to sample noise 
-            during the forward diffusion process and initialize the reverse diffusion process. 
-            Furthermore, since the diffusion model generates the 3D parameters for a given object image, 
-            we leverage 2D detection information to provide additional supervision by maintaining the 
-            correspondence between 3D/2D projection. Finally, depending on the signal-to-noise ratio, 
-            we incorporate a dynamic weighting scheme to account for the level of uncertainty in the
-            supervision by projection at different timesteps. <span class="dnerf">MonoDiff</span> outperforms current state-of-the-art 
-            monocular 3D detection methods on the KITTI and Waymo benchmarks without additional depth priors.
+Implicit Neural Representations (INRs) are continuous function learners for conventional digital signal representations. With the aid of positional embeddings and/or exhaustively fine-tuned activation functions, INRs have surpassed many limitations of traditional discrete representations. However, existing works only find a continuous representation for the digital signal by solely using a single, fixed activation function throughout the INR, and it has not yet been explored to match the INR to the given signal. As current INRs are not matched to the signal being represented by the INR, we hypothesize that this approach could restrict the representation power and generalization capabilities of INRs, limiting their broader applicability. A way to match the INR to the signal being represented is through matching the activation of each layer in the sense of minimizing the mean squared loss. In this paper, we introduce \textit{MIRE}, a method to find the highly matched activation function for each layer in INR through dictionary learning. To showcase the effectiveness of the proposed method, we utilize a dictionary that includes seven activation atoms: Raised Cosines (RC), Root Raised Cosines (RRC), Prolate Spheroidal Wave Function (PSWF), Sinc, Gabor Wavelet, Gaussian, and Sinusoidal. Experimental results demonstrate that \textit{MIRE} not only significantly improves INR performance across various tasks, such as image representation, image inpainting, 3D shape representation, novel view synthesis, super-resolution, and reliable edge detection, but also eliminates the need for the previously required exhaustive search for activation parameters, which had to be conducted even before INR training could begin.
           </p>
         </div>
       </div>
